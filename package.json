@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-sonoff-server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Wrapper for simple-sonoff-server to be runnable in Node-RED",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

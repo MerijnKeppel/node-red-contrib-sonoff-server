@@ -4,7 +4,7 @@
         category: 'config',
         defaults: {
             serverIP: { value: "0.0.0.0", required: true, validate: RED.validators.regex(ipAddressRegEx) },
-            httpPort { value: 1080, required: true, validate: RED.validators.number() },
+            httpPort: { value: 1080, required: true, validate: RED.validators.number() },
             httpsPort: { value: 1081, required: true, validate: RED.validators.number() },
             websocketPort: { value: 443, required: true, validate: RED.validators.number() }
         },

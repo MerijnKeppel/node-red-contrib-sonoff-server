@@ -1,5 +1,5 @@
 module.exports = function (RED) {
-    function SonoffOn(config) {
+    function SonoffState(config) {
         const node = this;
         RED.nodes.createNode(node, config);
         
@@ -7,9 +7,9 @@ module.exports = function (RED) {
         const sonoffServer = node.server.sonoffServer;
 
         node.on('input', function (msg) {
-            msg.payload = sonoffServer.turnOnDevice(msg.payload);
+            msg.payload = sonoffServer.getDeviceState(msg.payload);
             node.send(msg);
         });
     }
-    RED.nodes.registerType("sonoff-on", SonoffOn);
+    RED.nodes.registerType("sonoff-get", SonoffState);
 }
